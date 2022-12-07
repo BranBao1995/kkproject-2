@@ -1,0 +1,15 @@
+:root {
+  --font-primary: "Raleway", sans-serif;
+
+  --font-large: 5rem;
+  --font-medium: 3rem;
+  --font-small: 2rem;
+}
+
+.page {
+  padding: 0 3rem;
+
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+}
