@@ -11,12 +11,23 @@ import Contact from "./pages/Contact";
 import "./App.css";
 
 function App() {
+  const [activeLink, setActiveLink] = useState("home");
+
+  const activeLinkHandler = (link) => {
+    setActiveLink(link);
+    console.log(activeLink);
+  };
+
   return (
     <Router>
       <div className="page">
-        <Nav />
+        <Nav onSetActiveLink={activeLinkHandler} nowActive={activeLink} />
         <Routes>
-          <Route path="/kkproject-2/" element={<Home />} />
+          <Route
+            exact
+            path="/kkproject-2/"
+            element={<Home onSetActiveLink={activeLinkHandler} />}
+          />
           <Route path="/kkproject-2/countertops" element={<Countertops />} />
           <Route path="/kkproject-2/gallery" element={<Gallery />} />
           <Route path="/kkproject-2/about" element={<About />} />
@@ -26,6 +37,7 @@ function App() {
             element={<h1 className="display-2">Wrong page!</h1>}
           />
         </Routes>
+        <Footer onSetActiveLink={activeLinkHandler} />
       </div>
     </Router>
   );

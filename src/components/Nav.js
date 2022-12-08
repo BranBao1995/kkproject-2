@@ -3,13 +3,13 @@ import { NavLink } from "react-router-dom";
 import logo from "../images/kk_logo.png";
 import "./Nav.css";
 
-function Nav() {
-  const [activeLink, setActiveLink] = useState("home");
+function Nav(props) {
+  // const [activeLink, setActiveLink] = useState("home");
 
-  const activeLinkHandler = (link) => {
-    setActiveLink(link);
-    console.log(activeLink);
-  };
+  // const activeLinkHandler = (link) => {
+  //   setActiveLink(link);
+  //   console.log(activeLink);
+  // };
 
   const inactiveClass = "navbar-link";
   const activeClass = "navbar-link-active";
@@ -20,8 +20,8 @@ function Nav() {
       <ul className="navbar-links">
         <li>
           <NavLink
-            className={activeLink === "home" ? activeClass : inactiveClass}
-            onClick={() => activeLinkHandler("home")}
+            className={props.nowActive === "home" ? activeClass : inactiveClass}
+            onClick={() => props.onSetActiveLink("home")}
             to="/kkproject-2"
           >
             Home
@@ -30,9 +30,9 @@ function Nav() {
         <li>
           <NavLink
             className={
-              activeLink === "countertops" ? activeClass : inactiveClass
+              props.nowActive === "countertops" ? activeClass : inactiveClass
             }
-            onClick={() => activeLinkHandler("countertops")}
+            onClick={() => props.onSetActiveLink("countertops")}
             to="/kkproject-2/countertops"
           >
             Countertops
@@ -40,8 +40,10 @@ function Nav() {
         </li>
         <li>
           <NavLink
-            className={activeLink === "gallery" ? activeClass : inactiveClass}
-            onClick={() => activeLinkHandler("gallery")}
+            className={
+              props.nowActive === "gallery" ? activeClass : inactiveClass
+            }
+            onClick={() => props.onSetActiveLink("gallery")}
             to="/kkproject-2/gallery"
           >
             Gallery
@@ -49,8 +51,10 @@ function Nav() {
         </li>
         <li>
           <NavLink
-            className={activeLink === "about" ? activeClass : inactiveClass}
-            onClick={() => activeLinkHandler("about")}
+            className={
+              props.nowActive === "about" ? activeClass : inactiveClass
+            }
+            onClick={() => props.onSetActiveLink("about")}
             to="/kkproject-2/about"
           >
             About
@@ -58,8 +62,10 @@ function Nav() {
         </li>
         <li>
           <NavLink
-            className={activeLink === "contact" ? activeClass : inactiveClass}
-            onClick={() => activeLinkHandler("contact")}
+            className={
+              props.nowActive === "contact" ? activeClass : inactiveClass
+            }
+            onClick={() => props.onSetActiveLink("contact")}
             to="/kkproject-2/contact"
           >
             Contact

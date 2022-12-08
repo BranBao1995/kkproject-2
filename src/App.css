@@ -4,7 +4,9 @@
 
   --font-large: 5rem;
   --font-medium: 3rem;
-  --font-small: 2rem;
+  --font-small: 2.5rem;
+  --font-extra-small: 2rem;
+  --font-mini: 1.3;
 }
 
 .page {

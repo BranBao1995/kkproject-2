@@ -1,32 +1,17 @@
 .home {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  row-gap: 6rem;
 }
 
 .carousel {
-  width: 90%;
-}
-
-/* .carousel-item {
-  display: grid;
-  grid-template-columns: 100%;
-}
-
-.carousel-image {
-  grid-row: 1/2;
-  grid-column: 1/2;
-}
-
-.carousel-caption {
-  display: block;
   width: 100%;
-  grid-row: 1/2;
-  grid-column: 1/2;
-} */
+}
 
 .carousel-image {
-  height: 50rem;
+  height: 60rem;
   position: relative;
 }
 
@@ -40,6 +25,11 @@
   background: rgba(0, 0, 0, 0.6);
 }
 .carousel-caption {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 2rem;
   top: 40%;
   bottom: auto;
 }
@@ -52,4 +42,98 @@
 .carousel-caption-text {
   font-family: var(--font-primary);
   font-size: var(--font-medium);
+  line-height: 1.5;
+}
+
+.home-mid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mid-row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.mid-row:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.mid-row-text {
+  display: block;
+  width: 50%;
+  text-align: center;
+  font-family: var(--font-primary);
+  font-size: var(--font-small);
+  color: var(--font-color-primary);
+  line-height: 1.5;
+  padding: 1rem 3rem;
+  margin: 0;
+}
+
+.mid-row-logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.mid-row-logo {
+  display: block;
+  width: 40%;
+  height: auto;
+}
+
+.mid-row-image-container {
+  position: relative;
+  display: block;
+  width: 50%;
+}
+
+.mid-row-image {
+  width: 100%;
+  object-fit: cover;
+  z-index: 10;
+}
+
+.mid-row-image-hover {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.2s;
+}
+
+.mid-row-image-container:hover .mid-row-image-hover {
+  z-index: 20;
+  opacity: 1;
+}
+
+.mid-row-link,
+.mid-row-link:active,
+.mid-row-link:visited {
+  text-decoration: none;
+  font-family: var(--font-primary);
+  font-size: var(--font-large);
+  color: aliceblue;
+  padding-bottom: 0;
+  border-bottom: none;
+  transition: all 0.2s;
+}
+
+.mid-row-link:hover {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid aliceblue;
 }

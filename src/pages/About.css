@@ -1,0 +1,117 @@
+.about {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 8rem;
+}
+
+.carousel-caption-about {
+  top: 30%;
+}
+
+.carousel-caption-title-about {
+  font-size: var(--font-large);
+}
+
+.carousel-caption-text-about {
+  font-size: var(--font-extra-small);
+}
+
+.whyus {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 4rem;
+  margin-bottom: 4rem;
+}
+
+.whyus-h1 {
+  width: 70%;
+  font-family: var(--font-primary);
+  font-size: var(--font-large);
+  color: var(--font-color-primary);
+  text-align: center;
+}
+
+.whyus-reasons {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  row-gap: 4rem;
+}
+
+.whyus-reason {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* column-gap: 2rem; */
+}
+
+.whyus-reason-icon {
+  display: block;
+  width: 20%;
+  font-size: var(--font-large);
+}
+
+.whyus-reason-p {
+  display: block;
+  width: 70%;
+  font-family: var(--font-primary);
+  font-size: var(--font-small);
+  color: var(--font-color-primary);
+  line-height: 1.5;
+}
+
+.designer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6rem;
+}
+
+.designer-image-container {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.designer-image {
+  display: block;
+}
+
+.designer-info {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 2rem;
+}
+
+.designer-title {
+  display: block;
+  font-family: var(--font-primary);
+  font-size: var(--font-large);
+  color: var(--font-color-primary);
+  text-align: center;
+}
+
+.designer-text {
+  display: block;
+  font-family: var(--font-primary);
+  font-size: var(--font-extra-small);
+  color: var(--font-color-primary);
+  line-height: 1.5;
+}
