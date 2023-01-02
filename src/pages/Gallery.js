@@ -6,9 +6,12 @@ import Photos from "../components/Photos";
 import "./Gallery.css";
 
 function Gallery() {
+  // states managed by redux
   const dispatch = useDispatch();
   const images = useSelector((state) => state.gallery.images);
+  const imagesToDisplay = useSelector((state) => state.gallery.toDisplay);
 
+  // local UI states
   const [topFilter, setTopFilter] = useState("cabinets");
   const [lowFilter, setLowFilter] = useState({
     selected: "cabinets",
@@ -24,7 +27,26 @@ function Gallery() {
     setLowFilter({ ...lowFilter, category: category });
   };
 
-  useEffect(() => {}, [images]);
+  const renderImagesCabinets = (category) => {
+    const photos = images.cabinets[category];
+    dispatch(galleryActions.setImagesToDisplay({ images: photos }));
+  };
+
+  const renderImagesCountertops = (category) => {
+    const photos = images.countertops[category];
+    dispatch(galleryActions.setImagesToDisplay({ images: photos }));
+  };
+
+  useEffect(() => {
+    if (images) {
+      const photos = images.cabinets.all;
+      dispatch(galleryActions.setImagesToDisplay({ images: photos }));
+    }
+
+    console.log(imagesToDisplay);
+  }, [images]);
+
+  let gallery = imagesToDisplay;
 
   return (
     <div className="gallery">
@@ -36,7 +58,10 @@ function Gallery() {
               : "filter-top-level-button"
           }
           id="btn-cabinets"
-          onClick={() => setTopFilterHandler("cabinets")}
+          onClick={() => {
+            setTopFilterHandler("cabinets");
+            renderImagesCabinets("all");
+          }}
         >
           Cabinets
         </div>
@@ -47,7 +72,10 @@ function Gallery() {
               : "filter-top-level-button"
           }
           id="btn-countertops"
-          onClick={() => setTopFilterHandler("countertops")}
+          onClick={() => {
+            setTopFilterHandler("countertops");
+            renderImagesCountertops("all");
+          }}
         >
           Countertops
         </div>
@@ -60,7 +88,10 @@ function Gallery() {
                 ? "filter-low-level-button-selected"
                 : "filter-low-level-button"
             }
-            onClick={() => setLowFilterHandler("all")}
+            onClick={() => {
+              setLowFilterHandler("all");
+              renderImagesCabinets("all");
+            }}
           >
             All
           </div>
@@ -70,7 +101,10 @@ function Gallery() {
                 ? "filter-low-level-button-selected"
                 : "filter-low-level-button"
             }
-            onClick={() => setLowFilterHandler("bedroom")}
+            onClick={() => {
+              setLowFilterHandler("bedroom");
+              renderImagesCabinets("bedroom");
+            }}
           >
             Bedroom
           </div>
@@ -80,7 +114,10 @@ function Gallery() {
                 ? "filter-low-level-button-selected"
                 : "filter-low-level-button"
             }
-            onClick={() => setLowFilterHandler("kitchen")}
+            onClick={() => {
+              setLowFilterHandler("kitchen");
+              renderImagesCabinets("kitchen");
+            }}
           >
             Kitchen
           </div>
@@ -90,7 +127,10 @@ function Gallery() {
                 ? "filter-low-level-button-selected"
                 : "filter-low-level-button"
             }
-            onClick={() => setLowFilterHandler("livingroom")}
+            onClick={() => {
+              setLowFilterHandler("livingroom");
+              renderImagesCabinets("livingroom");
+            }}
           >
             Living Room
           </div>
@@ -104,7 +144,10 @@ function Gallery() {
                 ? "filter-low-level-button-selected"
                 : "filter-low-level-button"
             }
-            onClick={() => setLowFilterHandler("all")}
+            onClick={() => {
+              setLowFilterHandler("all");
+              renderImagesCountertops("all");
+            }}
           >
             All
           </div>
@@ -114,7 +157,10 @@ function Gallery() {
                 ? "filter-low-level-button-selected"
                 : "filter-low-level-button"
             }
-            onClick={() => setLowFilterHandler("bathroom")}
+            onClick={() => {
+              setLowFilterHandler("bathroom");
+              renderImagesCountertops("bathroom");
+            }}
           >
             Bathroom
           </div>
@@ -124,7 +170,10 @@ function Gallery() {
                 ? "filter-low-level-button-selected"
                 : "filter-low-level-button"
             }
-            onClick={() => setLowFilterHandler("kitchen")}
+            onClick={() => {
+              setLowFilterHandler("kitchen");
+              renderImagesCountertops("kitchen");
+            }}
           >
             Kitchen
           </div>
@@ -134,13 +183,16 @@ function Gallery() {
                 ? "filter-low-level-button-selected"
                 : "filter-low-level-button"
             }
-            onClick={() => setLowFilterHandler("livingroom")}
+            onClick={() => {
+              setLowFilterHandler("livingroom");
+              renderImagesCountertops("livingroom");
+            }}
           >
             Living Room
           </div>
         </section>
       )}
-      {/* <Photos /> */}
+      {imagesToDisplay !== null && <Photos photos={gallery} />}
     </div>
   );
 }

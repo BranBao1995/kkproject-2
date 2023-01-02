@@ -15,31 +15,36 @@ function Photos(props) {
     setShowBackdrop(false);
     setBackdropImage(null);
   };
-  //   let gallery = quartz_images.map((image) => {
-  //     return (
-  //       <div
-  //         className="image-container"
-  //         key={image.id}
-  //         onClick={() => showBackdropHandler(image.image)}
-  //       >
-  //         <img
-  //           className="image"
-  //           src={image.image}
-  //           alt=""
-  //         ></img>
-  //       </div>
-  //     );
-  //   });
+
+  let gallery = Object.keys(props.photos).map((el) => {
+    return (
+      <div
+        className="gallery-image-container"
+        key={props.photos[el].id}
+        onClick={() => showBackdropHandler(props.photos[el].image_url)}
+      >
+        <img
+          className="gallery-image"
+          src={props.photos[el].image_url}
+          alt=""
+        ></img>
+      </div>
+    );
+  });
 
   let backdrop = (
-    <div className="image-backdrop" onClick={hideBackdropHandler}>
-      <img className="image-backdrop-image" src={backdropImage} alt=""></img>
+    <div className="gallery-image-backdrop" onClick={hideBackdropHandler}>
+      <img
+        className="gallery-image-backdrop-image"
+        src={backdropImage}
+        alt=""
+      ></img>
     </div>
   );
 
   return (
-    <section className="quartz-gallery">
-      {/* {gallery} */}
+    <section className="gallery-gallery">
+      {gallery}
       {showBackdrop ? backdrop : ""}
     </section>
   );

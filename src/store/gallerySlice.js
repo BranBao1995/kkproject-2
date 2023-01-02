@@ -2,22 +2,8 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   images: null,
+  toDisplay: null,
 };
-
-// {
-//     cabinets: {
-//       all: [],
-//       bedroom: [],
-//       kitchen: [],
-//       livingroom: [],
-//     },
-//     countertops: {
-//       all: [],
-//       bathroom: [],
-//       kitchen: [],
-//       livingroom: [],
-//     },
-//   },
 
 const gallerySlice = createSlice({
   name: "gallery",
@@ -25,6 +11,9 @@ const gallerySlice = createSlice({
   reducers: {
     fetchImages(state, action) {
       state.images = action.payload.images;
+    },
+    setImagesToDisplay(state, action) {
+      state.toDisplay = action.payload.images;
     },
   },
 });
