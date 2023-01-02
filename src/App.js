@@ -1,5 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { galleryActions } from "./store/gallerySlice";
 
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
@@ -11,12 +14,33 @@ import Contact from "./pages/Contact";
 import "./App.css";
 
 function App() {
+  const dispatch = useDispatch();
+
   const [activeLink, setActiveLink] = useState("home");
 
   const activeLinkHandler = (link) => {
     setActiveLink(link);
-    console.log(activeLink);
+    // console.log(activeLink);
   };
+
+  useEffect(() => {
+    async function startFetch() {
+      try {
+        const response = await fetch(
+          "https://kkimage-new-default-rtdb.firebaseio.com/images.json"
+        );
+        if (!response.ok) {
+          throw new Error("Could not fetch data!");
+        }
+        const data = await response.json();
+        dispatch(galleryActions.fetchImages({ images: data }));
+      } catch (error) {
+        console.log(error);
+      }
+    }
+
+    startFetch();
+  }, [dispatch]);
 
   return (
     <Router>
