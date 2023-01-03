@@ -47,7 +47,7 @@ function App() {
       <div className="page">
         <Nav />
         <Routes>
-          <Route exact path="/kkproject-2" end element={<Home />} />
+          <Route exact path="/kkproject-2" element={<Home />} />
           <Route path="/kkproject-2/countertops" element={<Countertops />} />
           <Route path="/kkproject-2/gallery" element={<Gallery />} />
           <Route path="/kkproject-2/about" element={<About />} />
