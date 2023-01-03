@@ -4,15 +4,8 @@ import logo from "../images/kk_logo.png";
 import "./Nav.css";
 
 function Nav(props) {
-  // const [activeLink, setActiveLink] = useState("home");
-
-  // const activeLinkHandler = (link) => {
-  //   setActiveLink(link);
-  //   console.log(activeLink);
-  // };
-
-  const inactiveClass = "navbar-link";
-  const activeClass = "navbar-link-active";
+  let inactiveClass = "navbar-link";
+  let activeClass = "navbar-link-active";
 
   return (
     <div className="navbar">
@@ -20,19 +13,21 @@ function Nav(props) {
       <ul className="navbar-links">
         <li>
           <NavLink
-            className={props.nowActive === "home" ? activeClass : inactiveClass}
-            onClick={() => props.onSetActiveLink("home")}
+            exact
+            className={({ isActive }) =>
+              isActive ? activeClass : inactiveClass
+            }
             to="/kkproject-2"
+            end
           >
             Home
           </NavLink>
         </li>
         <li>
           <NavLink
-            className={
-              props.nowActive === "countertops" ? activeClass : inactiveClass
+            className={({ isActive }) =>
+              isActive ? activeClass : inactiveClass
             }
-            onClick={() => props.onSetActiveLink("countertops")}
             to="/kkproject-2/countertops"
           >
             Countertops
@@ -40,10 +35,9 @@ function Nav(props) {
         </li>
         <li>
           <NavLink
-            className={
-              props.nowActive === "gallery" ? activeClass : inactiveClass
+            className={({ isActive }) =>
+              isActive ? activeClass : inactiveClass
             }
-            onClick={() => props.onSetActiveLink("gallery")}
             to="/kkproject-2/gallery"
           >
             Gallery
@@ -51,10 +45,9 @@ function Nav(props) {
         </li>
         <li>
           <NavLink
-            className={
-              props.nowActive === "about" ? activeClass : inactiveClass
+            className={({ isActive }) =>
+              isActive ? activeClass : inactiveClass
             }
-            onClick={() => props.onSetActiveLink("about")}
             to="/kkproject-2/about"
           >
             About
@@ -62,10 +55,9 @@ function Nav(props) {
         </li>
         <li>
           <NavLink
-            className={
-              props.nowActive === "contact" ? activeClass : inactiveClass
+            className={({ isActive }) =>
+              isActive ? activeClass : inactiveClass
             }
-            onClick={() => props.onSetActiveLink("contact")}
             to="/kkproject-2/contact"
           >
             Contact

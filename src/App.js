@@ -16,12 +16,12 @@ import "./App.css";
 function App() {
   const dispatch = useDispatch();
 
-  const [activeLink, setActiveLink] = useState("home");
+  // const [activeLink, setActiveLink] = useState("home");
 
-  const activeLinkHandler = (link) => {
-    setActiveLink(link);
-    // console.log(activeLink);
-  };
+  // const activeLinkHandler = (link) => {
+  //   setActiveLink(link);
+  //   // console.log(activeLink);
+  // };
 
   useEffect(() => {
     async function startFetch() {
@@ -45,13 +45,9 @@ function App() {
   return (
     <Router>
       <div className="page">
-        <Nav onSetActiveLink={activeLinkHandler} nowActive={activeLink} />
+        <Nav />
         <Routes>
-          <Route
-            exact
-            path="/kkproject-2/"
-            element={<Home onSetActiveLink={activeLinkHandler} />}
-          />
+          <Route exact path="/kkproject-2" end element={<Home />} />
           <Route path="/kkproject-2/countertops" element={<Countertops />} />
           <Route path="/kkproject-2/gallery" element={<Gallery />} />
           <Route path="/kkproject-2/about" element={<About />} />
@@ -61,7 +57,7 @@ function App() {
             element={<h1 className="display-2">Wrong page!</h1>}
           />
         </Routes>
-        <Footer onSetActiveLink={activeLinkHandler} />
+        <Footer />
       </div>
     </Router>
   );

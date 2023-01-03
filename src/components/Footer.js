@@ -8,39 +8,19 @@ function Footer(props) {
   return (
     <div className="footer">
       <nav className="footer-nav">
-        <NavLink
-          className="footer-nav-link"
-          to="/kkproject-2"
-          onClick={() => props.onSetActiveLink("home")}
-        >
+        <NavLink className="footer-nav-link" to="/kkproject-2">
           Home
         </NavLink>
-        <NavLink
-          className="footer-nav-link"
-          to="/kkproject-2/countertops"
-          onClick={() => props.onSetActiveLink("countertops")}
-        >
+        <NavLink className="footer-nav-link" to="/kkproject-2/countertops">
           Countertops
         </NavLink>
-        <NavLink
-          className="footer-nav-link"
-          to="/kkproject-2/gallery"
-          onClick={() => props.onSetActiveLink("gallery")}
-        >
+        <NavLink className="footer-nav-link" to="/kkproject-2/gallery">
           Gallery
         </NavLink>
-        <NavLink
-          className="footer-nav-link"
-          to="/kkproject-2/about"
-          onClick={() => props.onSetActiveLink("about")}
-        >
+        <NavLink className="footer-nav-link" to="/kkproject-2/about">
           About
         </NavLink>
-        <NavLink
-          className="footer-nav-link"
-          to="/kkproject-2/contact"
-          onClick={() => props.onSetActiveLink("contact")}
-        >
+        <NavLink className="footer-nav-link" to="/kkproject-2/contact">
           Contact
         </NavLink>
       </nav>

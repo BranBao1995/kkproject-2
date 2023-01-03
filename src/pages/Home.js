@@ -23,9 +23,12 @@ function Home(props) {
           />
           <div className="overlay"></div>
           <Carousel.Caption className="carousel-caption">
-            <h3 className="carousel-caption-title">First slide label</h3>
+            <h3 className="carousel-caption-title">
+              Welcome to K&K Cabinets & Countertops
+            </h3>
             <p className="carousel-caption-text">
-              Nulla vitae elit libero, a pharetra augue mollis interdum.
+              Top quality cabinets & countertops for your beloved homes.
+              Appreciated by thousands of customers.
             </p>
           </Carousel.Caption>
         </Carousel.Item>
@@ -37,9 +40,12 @@ function Home(props) {
           />
           <div className="overlay"></div>
           <Carousel.Caption className="carousel-caption">
-            <h3 className="carousel-caption-title">First slide label</h3>
+            <h3 className="carousel-caption-title">
+              Welcome to K&K Cabinets & Countertops
+            </h3>
             <p className="carousel-caption-text">
-              Nulla vitae elit libero, a pharetra augue mollis interdum.
+              Top quality cabinets & countertops for your beloved homes.
+              Appreciated by thousands of customers.
             </p>
           </Carousel.Caption>
         </Carousel.Item>
@@ -51,9 +57,12 @@ function Home(props) {
           />
           <div className="overlay"></div>
           <Carousel.Caption className="carousel-caption">
-            <h3 className="carousel-caption-title">First slide label</h3>
+            <h3 className="carousel-caption-title">
+              Welcome to K&K Cabinets & Countertops
+            </h3>
             <p className="carousel-caption-text">
-              Nulla vitae elit libero, a pharetra augue mollis interdum.
+              Top quality cabinets & countertops for your beloved homes.
+              Appreciated by thousands of customers.
             </p>
           </Carousel.Caption>
         </Carousel.Item>
@@ -65,9 +74,12 @@ function Home(props) {
           />
           <div className="overlay"></div>
           <Carousel.Caption className="carousel-caption">
-            <h3 className="carousel-caption-title">First slide label</h3>
+            <h3 className="carousel-caption-title">
+              Welcome to K&K Cabinets & Countertops
+            </h3>
             <p className="carousel-caption-text">
-              Nulla vitae elit libero, a pharetra augue mollis interdum.
+              Top quality cabinets & countertops for your beloved homes.
+              Appreciated by thousands of customers.
             </p>
           </Carousel.Caption>
         </Carousel.Item>
@@ -79,9 +91,12 @@ function Home(props) {
           />
           <div className="overlay"></div>
           <Carousel.Caption className="carousel-caption">
-            <h3 className="carousel-caption-title">First slide label</h3>
+            <h3 className="carousel-caption-title">
+              Welcome to K&K Cabinets & Countertops
+            </h3>
             <p className="carousel-caption-text">
-              Nulla vitae elit libero, a pharetra augue mollis interdum.
+              Top quality cabinets & countertops for your beloved homes.
+              Appreciated by thousands of customers.
             </p>
           </Carousel.Caption>
         </Carousel.Item>
