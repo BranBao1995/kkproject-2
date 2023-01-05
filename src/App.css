@@ -6,7 +6,7 @@
   --font-medium: 3rem;
   --font-small: 2.5rem;
   --font-extra-small: 2rem;
-  --font-mini: 1.3;
+  --font-mini: 1.3rem;
 }
 
 .page {
@@ -16,4 +16,11 @@
   flex-direction: column;
   row-gap: 6rem;
   /* align-items: center; */
+}
+
+@media only screen and (max-width: 500px) {
+  .page {
+    row-gap: 3rem;
+    /* align-items: center; */
+  }
 }

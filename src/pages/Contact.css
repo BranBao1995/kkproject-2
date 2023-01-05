@@ -72,3 +72,51 @@
   padding-bottom: 0.5rem;
   border-bottom: 1px solid var(--font-color-primary);
 }
+
+@media only screen and (max-width: 900px) {
+  .business-info {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 2rem;
+  }
+
+  .business-info-title {
+    font-size: var(--font-small);
+  }
+
+  .business-info-hours-item {
+    font-size: 1.5rem;
+  }
+
+  .business-info-hours-email,
+  .business-info-hours-email:active,
+  .business-info-hours-email:visited {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .business-info-container {
+    flex-direction: column-reverse;
+    row-gap: 3rem;
+  }
+
+  .business-map-container {
+    width: 90%;
+    height: 40rem;
+  }
+
+  .business-info {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .business-map-container {
+    width: 90%;
+    height: 30rem;
+  }
+}

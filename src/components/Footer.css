@@ -73,3 +73,32 @@
 .footer-icon-link:hover {
   transform: translateY(-0.7rem);
 }
+
+@media only screen and (max-width: 600px) {
+  .footer-nav-link,
+  .footer-nav-link:active,
+  .footer-nav-link:visited {
+    font-size: var(--font-extra-small);
+  }
+  .footer-copyright {
+    font-size: var(--font-mini);
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .footer-nav-link,
+  .footer-nav-link:active,
+  .footer-nav-link:visited {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .footer-socials {
+    padding: 2rem 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1rem;
+  }
+}

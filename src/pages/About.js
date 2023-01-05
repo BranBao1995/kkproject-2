@@ -159,29 +159,28 @@ function About() {
         </div>
       </section>
       <section className="designer">
-        <div className="designer-image-container">
-          <img className="designer-image" src={designer} alt="designer"></img>
+        <h1 className="designer-title">Meet Our Lead Designer</h1>
+        <div className="designer-row">
+          <div className="designer-image-container">
+            <img className="designer-image" src={designer} alt="designer"></img>
+          </div>
         </div>
-
-        <div className="designer-info">
-          <h1 className="designer-title">Meet Our Lead Designer</h1>
-          <p className="designer-text">
-            Zenia Horton has been designing award-winning kitchens, baths, and
-            custom built ins for residential and commercial clients throughout
-            Ontario for the past 20 years. Zenia is a real designer- an
-            artist..which is really just a nice way of saying she's kind of
-            quirky! Working with Zen is entertaining, enlightening and engaging.
-            Her passion and artistry is captured in every design and exceeding
-            your expectations is her mission. Her goal as your designer is to
-            maximize the functionality, beauty and enjoyment of your space; she
-            has a reputation for thinking outside-the-box and consistently
-            delivers best in class solutions and "wow-factor" design. "Being
-            able to work alongside the skilled craftsmen and installers at K&K
-            to help deliver your vision has been a dream come true." So isn't it
-            about time that you brought balance, simplicity and some "zen" into
-            your space?
-          </p>
-        </div>
+        <p className="designer-text">
+          Zenia Horton has been designing award-winning kitchens, baths, and
+          custom built ins for residential and commercial clients throughout
+          Ontario for the past 20 years. Zenia is a real designer- an
+          artist..which is really just a nice way of saying she's kind of
+          quirky! Working with Zen is entertaining, enlightening and engaging.
+          Her passion and artistry is captured in every design and exceeding
+          your expectations is her mission. Her goal as your designer is to
+          maximize the functionality, beauty and enjoyment of your space; she
+          has a reputation for thinking outside-the-box and consistently
+          delivers best in class solutions and "wow-factor" design. "Being able
+          to work alongside the skilled craftsmen and installers at K&K to help
+          deliver your vision has been a dream come true." So isn't it about
+          time that you brought balance, simplicity and some "zen" into your
+          space?
+        </p>
       </section>
     </div>
   );

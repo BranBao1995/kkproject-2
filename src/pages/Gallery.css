@@ -101,3 +101,111 @@
   color: aliceblue;
   background-color: rgb(59, 59, 59);
 }
+
+@media only screen and (max-width: 1000px) {
+  .gallery {
+    row-gap: 4rem;
+  }
+  .filter-top-level-button {
+    padding: 2rem 0;
+    font-size: 4rem;
+  }
+
+  .filter-top-level-button-selected {
+    padding: 2rem 0;
+    font-size: 4rem;
+  }
+
+  .filter-low-level {
+    width: 90%;
+  }
+
+  .filter-low-level-button {
+    padding: 2rem 0;
+    font-size: var(--font-small);
+  }
+
+  .filter-low-level-button-selected {
+    padding: 2rem 0;
+    font-size: var(--font-small);
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .filter-top-level-button {
+    font-size: var(--font-medium);
+  }
+
+  .filter-top-level-button-selected {
+    font-size: var(--font-medium);
+  }
+  .filter-low-level-button {
+    padding: 2rem 1rem;
+    font-size: var(--font-extra-small);
+  }
+
+  .filter-low-level-button-selected {
+    padding: 2rem 1rem;
+    font-size: var(--font-extra-small);
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .filter-low-level-button {
+    font-size: 1.5rem;
+  }
+
+  .filter-low-level-button-selected {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .filter-top-level-button {
+    font-size: var(--font-small);
+  }
+
+  .filter-top-level-button-selected {
+    font-size: var(--font-small);
+  }
+
+  .filter-low-level-button {
+    padding: 1.5rem 1rem;
+  }
+
+  .filter-low-level-button-selected {
+    padding: 1.5rem 1rem;
+  }
+}
+
+@media only screen and (max-width: 530px) {
+  .filter-top-level {
+    width: 100%;
+  }
+
+  .filter-low-level {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .gallery {
+    row-gap: 2.5rem;
+  }
+  .filter-top-level-button {
+    padding: 1.5rem 0;
+    font-size: var(--font-extra-small);
+  }
+
+  .filter-top-level-button-selected {
+    padding: 1.5rem 0;
+    font-size: var(--font-extra-small);
+  }
+  .filter-low-level-button {
+    font-size: var(--font-mini);
+  }
+
+  .filter-low-level-button-selected {
+    font-size: var(--font-mini);
+  }
+}

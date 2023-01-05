@@ -44,3 +44,31 @@
   width: 70%;
   height: auto;
 }
+
+@media only screen and (max-width: 1000px) {
+  .gallery-image-container {
+    width: 25%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .gallery-gallery {
+    column-gap: 4rem;
+    row-gap: 4rem;
+    margin-bottom: 3rem;
+  }
+  .gallery-image-container {
+    width: 40%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .gallery-image-container {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .gallery-image-container {
+    width: 80%;
+  }
+}

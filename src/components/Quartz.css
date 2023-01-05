@@ -42,3 +42,30 @@
 .quartz-gallery-image-backdrop-image {
   display: block;
 }
+
+@media only screen and (max-width: 900px) {
+  .quartz-gallery {
+    column-gap: 2rem;
+    row-gap: 2rem;
+
+    margin-bottom: 2rem;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .quartz-gallery-image-container {
+    width: 30%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .quartz-gallery-image-container {
+    width: 40%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .quartz-gallery-image-container {
+    width: 60%;
+  }
+}
