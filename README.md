@@ -1,12 +1,13 @@
-# Responsive Web Dev Portfolio with React.js
+# K&K Cabinets & Countertops Company Website
 
-Bootcamp Module 20 Challenge - Building a web dev portfolio with React.js
+This is the K&K Cabinets & Countertops company's website.
 
 ## Description
 
-- This is my personal web developer's portflio built with React.js as a single page application
-- In this portfolio you can find information about me, my projects and links, get in touch with me, and download my resume.
-- This is a fully responsive web application and is mobile friendly.
+- K&K Cabinets & Countertops is a company that is based in Kitchener, ON, which provides design & installation solutions for top quality cabinets & countertops. The company has been serving local clients for more than 20 years and is currently led by head designer Zenia Horton.
+- The company needed a remake of their official website back in 2020 and was collecting ideas from many web developers by hosting a web design contest.
+- As a participating student who was learning web development at the time, this web design ended up taking 2nd place in the contest.
+- This is actually an improved version of my original design, as I have become a better web developer over the years and I thought I would be able to recreate this web design with better & more efficient code.
 
 ## Table of content
 
@@ -17,56 +18,32 @@ Bootcamp Module 20 Challenge - Building a web dev portfolio with React.js
 
 ## Installation
 
-- [Click here to go to my portfolio](https://branbao1995.github.io/React-Portfolio/)
+- [Click here to go to the website](https://branbao1995.github.io/kkproject-2)
 
 ## Usage
 
-- Link to the Github Repository [https://github.com/BranBao1995/React-Portfolio](https://github.com/BranBao1995/React-Portfolio)
+- Link to the Github Repository [https://github.com/BranBao1995/kkproject-2](https://github.com/BranBao1995/kkproject-2)
 
-- This is the bio page of the portfolio:
+- This is the home page:
 
-  - ![bio](./images/about-page.JPG)
+  - ![Home](./screenshots/Home.png)
 
-- This is the projects page of the portfolio:
+- This is the Countertops page, users can click on the images to see all available countertops material selections:
 
-  - ![projects](./images/projects-page.JPG)
+  - ![Countertops](./screenshots/Countertops.png)
+
+- This is the gallery page, users can see all works done by the company:
+
+  - ![Gallery](./screenshots/Gallery.png)
+
+- This is the about page where brief introduction of the company and the company's head designer are provided:
+
+  - ![About](./screenshots/About.png)
 
 - This is the contact page of the portfolio:
 
-  - ![contact](./images/contact-page.JPG)
-
-- Form includes field validations, error will occur if the information entered does not meet the requirements:
-
-  - ![Form submission error](./images/contact-page-form-error.JPG)
-
-- This is the resume page of the portfolio, click the "download resume" button to download my resume:
-
-  - ![resume](./images/resume-page.JPG)
+  - ![Contact](./screenshots/Contact.png)
 
 ## Credits
 
 - Author's Github Profile: [https://github.com/BranBao1995](https://github.com/BranBao1995)
-
-## License ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
-
-The MIT License
-
-Copyright (c) [2022] [Hongdong Bao]
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
